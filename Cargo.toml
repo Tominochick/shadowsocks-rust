@@ -14,10 +14,23 @@ rust-version = "1.71"
 [badges]
 maintenance = { status = "passively-maintained" }
 
+[lib]
+name = "libsslocal"
+path = "lib/libsslocal.rs"
+crate-type = ["cdylib"]
+required-features = ["local"]
+
 [[bin]]
 name = "sslocal"
 path = "bin/sslocal.rs"
 required-features = ["local"]
+
+[[bin]]
+name = "sslocal-http"
+path = "bin/sslocal-http.rs"
+required-features = ["local"]
+
+
 
 [[bin]]
 name = "ssserver"
